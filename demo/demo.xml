@@ -24,5 +24,28 @@
             <field name="value">50</field>
             <field name="description">Muestra de contenido en descripcion</field>
         </record>
+
+
+        <record id="object0" model="games_register.tags">
+            <field name="name">Aventura</field>
+            <field name="description">Muestra de contenido en descripcion</field>
+        </record>
+
+        <record id="object1" model="games_register.tags">
+            <field name="name">Deporte</field>
+            <field name="description">Muestra de contenido en descripcion</field>
+        </record>
+
+        <record id="object2" model="games_register.tags">
+            <field name="name">Estrategia</field>
+            <field name="description">Muestra de contenido en descripcion</field>
+        </record>
+
+        <record id="object3" model="games_register.tags">
+            <field name="name">Otros/field>
+            <field name="description">Muestra de contenido en descripcion</field>
+        </record>
+
+
     </data>
 </odoo>

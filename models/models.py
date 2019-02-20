@@ -8,6 +8,16 @@ class games_register(models.Model):
      name = fields.Char(string = "Nombre del Juego", required = True)
      value = fields.Integer()
      description = fields.Text()
+
+
+class tags(models.Model):
+     _name = 'games_register.tags'
+     _description = "Un Tag de clasificación para cada juego"
+
+     name = fields.Char(string="Nombre Tag", required=True)
+     description = fields.Text()
+
+
 #     value2 = fields.Float(compute="_value_pc", store=True)
 
 #

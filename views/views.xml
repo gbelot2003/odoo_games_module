@@ -1,8 +1,9 @@
 <odoo>
   <data>
-    <!-- explicit list view definition -->
-    <!--<record model="ir.ui.view" id="games_register.list">
-      <field name="name">games_register list</field>
+
+   <!-- explicit list view definition -->
+   <record model="ir.ui.view" id="games_register.list">
+      <field name="name">Games Manager list</field>
       <field name="model">games_register.manager</field>
       <field name="arch" type="xml">
         <tree>
@@ -11,13 +12,30 @@
           <field name="value"/>
         </tree>
       </field>
-    </record>-->
+    </record>
 
+    <record model="ir.ui.view" id="games_register_search_view">
+      <field name="name">games_register.search</field>
+      <field name="model">games_register.manager</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="description"/>
+        </search>
+      </field>
+    </record>
 
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="games_register.action_window">
       <field name="name">Odoo Game Manager</field>
       <field name="res_model">games_register.manager</field>
+      <field name="view_mode">tree,form,search</field>
+    </record>
+
+        <!-- actions opening views for tags -->
+    <record model="ir.actions.act_window" id="games_register_tags_action_windows">
+      <field name="name">Odoo Tag Manager</field>
+      <field name="res_model">games_register.tags</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -42,10 +60,11 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="games_register.menu_1" parent="games_register.menu_root"/>
+    <menuitem name="Games" id="games_register.menu_1" parent="games_register.menu_root"/>
 
-    <menuitem name="Game Manager" id="games_register.menu_1_gamemanager" parent="games_register.menu_1" 
-                                                                    action="games_register.action_window"/>
+    <menuitem name="Game Manager" id="games_register.menu_1_gamemanager" parent="games_register.menu_1" action="games_register.action_window"/>
+
+    <menuitem name="Tags Manager" id="games_register.menu_2_tagsmanager" parent="games_register.menu_1" action="games_register_tags_action_windows"/>
 
     <!--<menuitem name="List" id="games_register.menu_1_list" parent="games_register.menu_1" action="games_register.action_window"/>-->
     <!--

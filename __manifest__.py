@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Games Register",
+    'name': "games_register",
 
     'summary': """
         Registro simple de juegos para conocimiento general de odoo

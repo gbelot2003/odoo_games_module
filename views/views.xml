@@ -8,8 +8,8 @@
     <menuitem name="Game Manager" id="games_register.menu_1_gamemanager" parent="games_register.menu_1" action="games_register.action_window"/>
 
 
-   <!-- explicit list view definition -->
-   <record model="ir.ui.view" id="games_register.list">
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="games_register.list">
       <field name="name">Games Manager list</field>
       <field name="model">games_register.manager</field>
       <field name="arch" type="xml">
@@ -17,6 +17,8 @@
           <field name="name"/>
           <field name="description"/>
           <field name="value"/>
+          <field name="responsable_id" />
+          <field name="tags_id" />
         </tree>
       </field>
     </record>

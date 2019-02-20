@@ -8,6 +8,8 @@ class games_register(models.Model):
      name = fields.Char(string = "Nombre del Juego", required = True)
      value = fields.Integer()
      description = fields.Text()
+     responsable_id = fields.Many2one('res.users', ondelete='set null', string="responsable", index=True)
+     tags_id = fields.Many2one('games_register.tags', ondelete='cascade', string="tags", index=True)
 
 
 class tags(models.Model):
@@ -16,6 +18,7 @@ class tags(models.Model):
 
      name = fields.Char(string="Nombre Tag", required=True)
      description = fields.Text()
+     games_ids = fields.One2many('games_register.manager', 'tags_id', string='Juegos')
 
 
 #     value2 = fields.Float(compute="_value_pc", store=True)

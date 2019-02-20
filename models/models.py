@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+class games_register(models.Model):
+     _name = 'games_register.manager'
+     _description = "Registro maestro de juegos"
 
-# class games_register(models.Model):
-#     _name = 'games_register.games_register'
-
-#     name = fields.Char()
-#     value = fields.Integer()
+     name = fields.Char(string = "Nombre del Juego", required = True)
+     value = fields.Integer()
+     description = fields.Text()
 #     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
+
 #
 #     @api.depends('value')
 #     def _value_pc(self):
